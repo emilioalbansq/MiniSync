@@ -1,0 +1,152 @@
+
+{          INICIALIZANDO IPC        }
+Pipe del Worker 1 creado correctamente.
+Pipe del Worker 2 creado correctamente.
+Memoria compartida y semáforo creados.
+[Monitor] Logger creado. PID: 1822
+    [Worker 1] Iniciado. PID: 1823
+[Monitor] Worker 1 creado. PID: 1823
+[Monitor] Worker 2 creado. PID: 1824
+
+-------------------------------------
+        ESCANEO DE DIRECTORIO
+-------------------------------------
+    [Worker 2] Iniciado. PID: 1824
+[Logger] Iniciado. PID: 1822
+
+    Cantidad de archivos encontrados: 5
+
+---------- ESCANEO INICIAL ----------
+
+========================================
+    Nombre: foto.jpg
+    Ruta: originales/documentos/foto.jpg
+    Inodo: 120442060898
+    Tamaño: 0 bytes
+    Permisos: rwxrwxrwx
+Fecha modificación: 13/07/2026 21:24:41
+========================================
+
+========================================
+    Nombre: documento.docx
+    Ruta: originales/documentos/documento.docx
+    Inodo: 120442060994
+    Tamaño: 46 bytes
+    Permisos: rwxrwxrwx
+Fecha modificación: 17/07/2026 03:23:18
+========================================
+
+========================================
+    Nombre: informe.pdf
+    Ruta: originales/documentos/informe.pdf
+    Inodo: 120442061090
+    Tamaño: 0 bytes
+    Permisos: rwxrwxrwx
+Fecha modificación: 17/07/2026 04:16:24
+========================================
+
+========================================
+    Nombre: archivo1.txt
+    Ruta: originales/archivo1.txt
+    Inodo: 120441536610
+    Tamaño: 155 bytes
+    Permisos: rwxrwxrwx
+Fecha modificación: 17/07/2026 04:16:20
+========================================
+
+========================================
+    Nombre: informe.pdf
+    Ruta: originales/informe.pdf
+    Inodo: 120441536802
+    Tamaño: 0 bytes
+    Permisos: rwxrwxrwx
+Fecha modificación: 17/07/2026 03:21:34
+========================================
+
+Esperando modificaciones...
+
+.....................................
+    ESTADISTICAS DE SINCRONIZACION
+.....................................
+Archivos copiados: 0
+Bytes copiados: 0
+Errores: 0
+
+-------------------------------------
+        ESCANEO DE DIRECTORIO
+-------------------------------------
+
+    Cantidad de archivos encontrados: 5
+
+---------- NUEVO ESCANEO ----------
+    [MONITOR] Archivo modificado: originales/documentos/informe.pdf
+    Tamaño anterior: 0 bytes
+    Tamaño actual: 0 bytes
+    [MONITOR] Archivo modificado: originales/archivo1.txt
+    Tamaño anterior: 155 bytes
+    Tamaño actual: 207 bytes
+-- Archivos nuevos o modificados: 2 --
+[Monitor] originales/documentos/informe.pdf asignado al Worker 1
+    [Worker 1] Copiando: originales/documentos/informe.pdf
+[Monitor] originales/archivo1.txt asignado al Worker 2
+    [Worker 2] Copiando: originales/archivo1.txt
+    [Worker 1] Copia terminada: backup/informe.pdf
+    [Worker 2] Copia terminada: backup/archivo1.txt
+
+.....................................
+    ESTADISTICAS DE SINCRONIZACION
+.....................................
+Archivos copiados: 2
+Bytes copiados: 207
+Errores: 0
+
+-------------------------------------
+        ESCANEO DE DIRECTORIO
+-------------------------------------
+
+    Cantidad de archivos encontrados: 5
+
+---------- NUEVO ESCANEO ----------
+    [MONITOR] Archivo modificado: originales/documentos/informe.pdf
+    Tamaño anterior: 0 bytes
+    Tamaño actual: 0 bytes
+    [MONITOR] Archivo modificado: originales/archivo1.txt
+    Tamaño anterior: 207 bytes
+    Tamaño actual: 259 bytes
+-- Archivos nuevos o modificados: 2 --
+[Monitor] originales/documentos/informe.pdf asignado al Worker 1
+[Monitor] originales/archivo1.txt asignado al Worker 2
+    [Worker 1] Copiando: originales/documentos/informe.pdf
+    [Worker 2] Copiando: originales/archivo1.txt
+    [Worker 1] Copia terminada: backup/informe.pdf
+    [Worker 2] Copia terminada: backup/archivo1.txt
+
+.....................................
+    ESTADISTICAS DE SINCRONIZACION
+.....................................
+Archivos copiados: 4
+Bytes copiados: 466
+Errores: 0
+
+-------------------------------------
+        ESCANEO DE DIRECTORIO
+-------------------------------------
+
+    Cantidad de archivos encontrados: 5
+
+---------- NUEVO ESCANEO ----------
+-- Archivos nuevos o modificados: 0 --
+
+.....................................
+    ESTADISTICAS DE SINCRONIZACION
+.....................................
+Archivos copiados: 4
+Bytes copiados: 466
+Errores: 0
+
+[Monitor] Finalizando MiniFileSync...
+[Worker 1] Finalizado.
+[Worker 2] Finalizado.
+[Logger] Finalizado.
+[IPC] Recursos liberados.
+[Monitor] MiniFileSync finalizado.
